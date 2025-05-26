@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;" lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rizky App Store - Sewa Bot WhatsApp</title>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      background: url('1.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    header {
+      text-align: center;
+      position: relative;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+
+    .fire-ring {
+      display: inline-block;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 1rem;
+    }
+
+    .fire-svg {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 140px;
+      height: 140px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .wa-button {
+      background-color: #25D366;
+      padding: 12px 16px;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin: 8px 4px 0;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .wa-button.group {
+      background-color: #128C7E;
+    }
+
+    .wa-button.instagram {
+      background-color: #E1306C;
+    }
+
+    .wa-button.tiktok {
+      background-color: #000;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: auto;
+    }
+
+    .video-container {
+      margin-top: 1rem;
+    }
+
+    .desc-box {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .voice-button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      background: #ffffff22;
+      backdrop-filter: blur(4px);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (min-width: 480px) {
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header data-aos="fade-down">
+      <div class="fire-ring">
+        <img src="3.jpg" alt="Foto Profil" class="profile-pic" />
+        <svg class="fire-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="flameGradient" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="orange" stop-opacity="1" />
+              <stop offset="100%" stop-color="red" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle cx="100" cy="100" r="80" fill="url(#flameGradient)">
+            <animate attributeName="r" values="70;80;70" dur="0.5s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.8;0.4;0.8" dur="0.5s" repeatCount="indefinite" />
+          </circle>
+        </svg>
+      </div>
+      <h1>🔰RIZKY APP STORE🔰</h1>
+      <p>Sewa Bot WhatsApp Profesional Terjangkau</p>
+      <button onclick="sambutanAI()" class="voice-button">Putar Sambutan</button>
+    </header>
+
+    <main>
+      <section id="paket" data-aos="zoom-in">
+        <div class="card">
+          <h2>Paket Pro</h2>
+          <p>Bot WhatsApp dengan fitur lengkap auto reply canggih.</p>
+          <strong>Rp 25.00</strong><br>
+          <a href="https://wa.me/6283850540570?text=Halo%20saya%20mau%20sewa%20bot" class="wa-button" target="_blank" rel="noopener">Beli via WhatsApp</a>
+        </div>
+      </section>
+
+
+<section id="panel" data-aos="zoom-in">
+  <div class="card">
+    <h2>🌐Tampilan harga VPS🌐</p>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>VPS 3 hari</h3>
+        <p> <strong>Rp 5.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>VPS 4 hari</h3>
+        <p> <strong>Rp 6.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>VPS 5 hari</h3>
+        <p> <strong>Rp 7.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>VPS 6 hari</h3>
+        <p><strong>Rp 8.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>VPS 7 hari</h3>
+        <p><strong>Rp 9.000</strong></p>
+      </div>
+    </div>
+    <a href="https://wa.me/6283850540570?text=Bang%20aku%20mau%20beli%20VPS😁" class="wa-button" target="_blank" rel="noopener">older vps</a>
+  </div>
+</section>
+
+  
+
+<section id="server" data-aos="zoom-in">
+  <div class="card">
+    <h2>🌐Harga server Minecraft🌐</h2>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>2GB</h3>
+        <p><strong>Rp 4.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>3GB</h3>
+        <p><strong>Rp 5.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>4GB</h3>
+        <p><strong>Rp 6.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>5GB</h3>
+        <p><strong>Rp 7.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>6GB</h3>
+        <p><strong>Rp 8.00</strong></p>
+      </div>
+    </div>
+    <a href="https://wa.me/6283850540570?text=Bang%20aku%20mau%20beli%20server%20Minecraft😁" class="wa-button" target="_blank" rel="noopener">Beli server</a>
+  </div>
+</section>
+
+
+      
+
+
+<section id="panel" data-aos="zoom-in">
+  <div class="card">
+    <h2>🌐Harga panel🌐</h2>
+    <p>Panel bot murah dan terjangkau dan ada garansinya lagi</p>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>3GB</h3>
+        <p><strong>Rp 4.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>5GB</h3>
+        <p><strong>Rp 6.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>6GB</h3>
+        <p> <strong>Rp 7.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>7GB</h3>
+        <p> <strong>Rp 8.00</strong></p>
+      </div>
+      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px;">
+        <h3>8</h3>
+        <p> <strong>Rp 9.00</strong></p>
+      </div>
+    </div>
+    <a href="https://wa.me/6283850540570?text=Bang%20aku%20mau%20beli%20panel%20bang😁" class="wa-button" target="_blank">Beli panel</a>
+  </div>
+</section>
+
+
+<section id="fitur" data-aos="fade-up">
+        <div class="card">
+          <h2>Fitur Unggulan</h2>
+          <ul>
+            <li>Auto Reply 24/7</li>
+            <li>Broadcast Massal</li>
+            <li>Integrasi Google Sheet</li>
+            <li>Dashboard Statistik</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="kontak" data-aos="fade-up">
+        <div class="card">
+          <h2>Kontak</h2>
+          <p>Hubungi kami langsung via WhatsApp atau sosial media di bawah.</p>
+        </div>
+      </section>
+
+      <section id="tentang" data-aos="fade-up">
+        <div class="card">
+          <h2>Tentang Bot WhatsApp Kami</h2>
+          <div class="video-container">
+            <video controls style="width: 100%; border-radius: 12px;" poster="4.mp4">
+              <source src="4.mp4" type="video/mp4">
+              Browser Anda tidak mendukung pemutaran video.
+              
+            </video>
+            <div class="desc-box">
+              Bot WhatsApp kami dirancang untuk membantu bisnis Anda merespons pelanggan secara otomatis
+              mengelola broadcast dan menyimpan data secara efisien Cocok untuk UMKM online shop hingga layanan publik
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sosial" data-aos="fade-up">
+        <div class="card">
+          <h2>Ikuti Kami</h2>
+          <a href="https://wa.me/6283850540570" class="wa-button" target="_blank" rel="noopener">Chat WhatsApp</a>
+          <a href="https://chat.whatsapp.com/HX9Mp2uhZKuBTUqGFJEhyT" class="wa-button group" target="_blank" rel="noopener">Gabung Grup WhatsApp</a>
+          <a href="https://www.instagram.com/rizky.0_o?igsh=bGJ6dGdvYnR6Y3c2" class="wa-button instagram" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@rizky.cyber?_t=ZS-8weuPIcfrGx&_r=1" class="wa-button tiktok" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </section>
+    </main>
+
+    
+
+
+
+<section id="chatbot" data-aos="fade-up">
+  <div class="card" style="text-align: center;">
+    <h2>Asisten RizkyBot</h2>
+    <p>Tanyakan apa pun tentang website ini, bot kami siap bantu!</p>
+    <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+      <div id="chat" style="background:#1e1e1e; color:white; text-align:left; border-radius:10px; padding:1rem; height:300px; overflow-y:auto; margin-bottom:1rem;"></div>
+      <input type="text" id="userInput" placeholder="Tanyakan sesuatu..." style="width:70%; padding:10px; border-radius:5px; border:none;" />
+      <button onclick="sendMessage()" style="padding:10px 15px; border:none; border-radius:5px; background:#25D366; color:white; cursor:pointer;">Kirim</button>
+    </div>
+  </div>
+</section>
+
+
+<section id="lokasi" data-aos="fade-up">
+  <div class="card" style="text-align: center;">
+    <h2>Rizky Blackhead</h2>
+    <img src="p.jpg" alt="Foto Profil Rizky" style="width: 150px; border-radius: 50%; margin: 10px 0;" />
+    <p>Lokasi saya berada di Sijunjung, Sumatera Barat. Silakan cek peta di bawah ini.</p>
+    <div style="width: 100%; height: 300px;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127391.8604817431!2d100.9111312!3d-0.6878135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd59f89f7b1c657%3A0xf8b8c3a4ef77961e!2sKabupaten%20Sijunjung%2C%20Sumatera%20Barat!5e0!3m2!1sid!2sid!4v1716611849915!5m2!1sid!2sid" 
+        width="100%" height="100%" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer data-aos="fade-up">
+      &copy; 2025 Rizky App Store
+    </footer>
+  </div>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!-- AI Voice -->
+  <script>
+    function sambutanAI() {
+      const pesan = new SpeechSynthesisUtterance(
+        "Selamat datang di Rizky App Store! Kami menyediakan layanan sewa bot WhatsApp profesional dan terjangkau."
+      );
+      pesan.lang = 'id-ID';
+      pesan.rate = 1;
+      speechSynthesis.cancel(); // Stop previous voice
+      speechSynthesis.speak(pesan);
+    }
+  </script>
+
+<!-- Tombol Chat Admin Mengambang -->
+<a href="https://wa.me/6283850540570?text=Halo%20admin%20saya%20butuh%20bantuan" class="wa-chat-float" target="_blank" rel="noopener">
+  Chat Admin
+</a>
+
+<style>
+.wa-chat-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+</style>
+
+
+<a href="https://chat.whatsapp.com/HX9Mp2uhZKuBTUqGFJEhyT" class="wa-login-float" target="_blank" rel="noopener">
+  Masuk Akun Admin
+</a>
+<style>
+.wa-login-float {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #007AFF;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+</style>
+
+
+
+<!-- Chatbot Script -->
+<script>
+  const chat = document.getElementById('chat');
+  const input = document.getElementById('userInput');
+  const apiKey = "000"; // Ganti ini dengan API key kamu
+
+  function addMessage(text, sender) {
+    const div = document.createElement('div');
+    div.className = 'msg ' + sender;
+    div.style.margin = "0.5rem 0";
+    div.innerText = text;
+    chat.appendChild(div);
+    chat.scrollTop = chat.scrollHeight;
+  }
+
+  async function sendMessage() {
+    const message = input.value.trim();
+    if (!message) return;
+    addMessage(message, 'user');
+    input.value = '';
+
+    addMessage("Mengetik...", 'bot');
+
+    try {
+      const res = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + apiKey
+        },
+        body: JSON.stringify({
+          model: "gpt-3.5-turbo",
+          messages: [{ role: "user", content: message }]
+        })
+      });
+
+      const data = await res.json();
+      document.querySelector('.bot:last-child').remove(); // remove "Mengetik..."
+      if (data.choices && data.choices.length > 0) {
+        addMessage(data.choices[0].message.content, 'bot');
+      } else {
+        addMessage("Maaf, tidak ada respons.", 'bot');
+      }
+    } catch (err) {
+      document.querySelector('.bot:last-child').remove();
+      addMessage("Gagal terhubung ke AI.", 'bot');
+    }
+  }
+
+  input.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") sendMessage();
+  });
+</script>
+
+</body>
+</html>
